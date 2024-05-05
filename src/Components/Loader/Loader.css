@@ -1,0 +1,14 @@
+.Loader {
+    height: 50px;
+    width: 50px; 
+    border-radius: 30px;
+    background-color:white
+}
+
+.Loader-Header { 
+    background-color:black;
+    padding: 5px;
+    border-radius: 30px;
+    
+}
+

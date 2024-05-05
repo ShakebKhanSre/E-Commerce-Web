@@ -1,0 +1,49 @@
+.Login-Container {
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Login-Page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 300px;
+}
+
+.Login-Page img {
+    align-self: center;
+}
+
+form {
+    border: 1px solid black;
+    padding: 20px 100px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
+
+input {
+    padding: 12px 60px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 50px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.New-User {
+    padding: 0px 75px;
+    display: flex;
+}
+
+.New-User p {
+    font-weight: bolder;
+    color: rgb(249,217,76);
+    cursor: pointer;
+}

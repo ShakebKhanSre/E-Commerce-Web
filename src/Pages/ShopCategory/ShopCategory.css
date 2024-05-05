@@ -1,0 +1,52 @@
+.Shop-Container  {
+    padding: 100px;
+}
+
+.Header {
+    font-weight: bold;
+}
+
+.Banner { 
+    left: 0px;
+    right: 0px;
+    background-color: var(--bodyColor);  
+    padding: 50px; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.Content {
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; */
+}
+
+.Result-Heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:10px;
+}
+
+.Result-Heading button {
+    cursor: pointer;
+    font-weight: bold;
+    align-self: center;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color:var(--buttonColor);  
+}
+
+.Result-Heading button img {
+    align-self: center;
+    margin-left: 5px;
+}
+

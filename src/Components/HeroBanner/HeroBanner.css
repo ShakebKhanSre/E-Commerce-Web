@@ -1,0 +1,24 @@
+.Hero-Banner { 
+    display: flex;  
+    flex-direction: row;
+    background-color:#5f9ea0;
+    justify-content: space-evenly;
+    border-radius: 50px;
+    margin-top: 30px;
+}
+
+.Hero {
+    padding-top:80px;
+}
+
+.Hero-Text {
+    align-self: center;
+}
+
+.Hero-Text p  {
+    font-size: 20px;
+}
+
+.Arrival-Text {
+    font-weight: bold;
+}

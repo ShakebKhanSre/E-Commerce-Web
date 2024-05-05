@@ -1,0 +1,44 @@
+.First-Last {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.Sign-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    margin-top: 100px;
+}
+
+.Outer-Input {
+    padding: 10px 100px;
+}
+
+.Inner-Input {
+    padding: 10px;
+}
+
+.Name {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+button {
+    background-color: rgb(249,217,76);
+    border-width: 0px;
+    padding: 10px 120px;
+    border-radius: 5px;
+    box-shadow:0px 6px 20px 0 rgba(0,0,0,0.19);
+    font-weight:bolder;
+}

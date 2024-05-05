@@ -1,0 +1,53 @@
+.container {
+    padding: 40px;
+}
+
+.navbar { 
+    position: fixed;
+    left: 0px;
+    right: 0px;
+}
+.Best-Selling-Header {
+    font-weight: bold;
+    font-size: 20px;
+}
+.Scroll-Image {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    cursor: pointer;
+}
+.Scroll-Image img {
+    align-self: center;
+}
+
+
+.Best-Selling { 
+    margin-top: 50px;
+}
+
+
+.Product-Data { 
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    gap:150px
+}
+
+.Item {
+    margin-right:120px;
+    border-radius: 10px;
+    width:300px;
+    height:300px;
+}
+
+.Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+
