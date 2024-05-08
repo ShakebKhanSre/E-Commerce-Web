@@ -23,4 +23,11 @@ export const enums = {
   crateAccount: "Create Account",
   signedUp: "You Successfully Signed Up",
   loginPage: "Go Back To Login Page",
+  addNew: "Add New Product",
+  ediProduct: "Edit Product",
+  submit: "Submit",
+  productAdded: "New Product Successfully Added",
+  productEdited: "Product Edited Successfully",
+  backToHome: "Go Back To Home Screen",
+  viewAll: "View All",
 };

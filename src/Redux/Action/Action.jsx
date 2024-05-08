@@ -1,4 +1,8 @@
-import { sendPostRequest, sendGetRequest } from "../../ApiManager";
+import {
+  sendPostRequest,
+  sendGetRequest,
+  putRequestAuthenticated,
+} from "../../ApiManager";
 import { authConstants } from "../Constants/Constants";
 
 export const getAllProducts =
@@ -56,6 +60,32 @@ export const signUp =
     try {
       const response = await sendPostRequest(
         "https://fakestoreapi.com/users",
+        params
+      );
+
+      callback(response);
+    } catch {}
+  };
+
+export const addNewProduct =
+  (params, callback = () => {}, error = () => {}) =>
+  async (dispatch) => {
+    try {
+      const response = await sendPostRequest(
+        "https://fakestoreapi.com/products",
+        params
+      );
+
+      callback(response);
+    } catch {}
+  };
+
+export const updateProduct =
+  (params, productId, callback = () => {}, error = () => {}) =>
+  async (dispatch) => {
+    try {
+      const response = await putRequestAuthenticated(
+        `https://fakestoreapi.com/products/${productId}`,
         params
       );
 

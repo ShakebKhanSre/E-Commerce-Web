@@ -48,7 +48,6 @@ const SignUpScreen = () => {
       signUp(
         params,
         (res) => {
-          console.log("res", res?.id);
           if (res?.id) {
             setModalState(true);
           }

@@ -9,6 +9,7 @@ const Item = (props) => {
         width={props.width}
         height={props.height}
       />
+
       <p>{`Price - ${props?.source?.price}$`}</p>
     </div>
   );

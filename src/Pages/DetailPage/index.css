@@ -20,6 +20,12 @@
     font-weight: bold;
 }
 
+.Spinner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .category {
     font-size: 15px;
     font-weight: bold;
@@ -55,4 +61,13 @@
     scrollbar-width: none;
     gap:150px;
     scroll-behavior: smooth;
+}
+
+.View-All {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ViewAll-Button {
+    cursor: pointer;
 }

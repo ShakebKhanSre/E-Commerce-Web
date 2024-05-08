@@ -48,6 +48,17 @@
     justify-content: space-between;
 }
 
+.Add-Icon {
+    background-color:yellowgreen;
+    height: 90px;
+    width: 90px;
+    padding: 40px;
+    border-radius: 20px;
+}
 
 
-
+.Edit-Icon {
+    position: relative;
+    left: 110px;
+    bottom: 210px;
+}
