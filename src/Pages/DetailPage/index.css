@@ -26,6 +26,11 @@
     justify-content: center;
 }
 
+.Product-Data img {
+    width: 150px;
+    height: 150px;
+}
+
 .category {
     font-size: 15px;
     font-weight: bold;

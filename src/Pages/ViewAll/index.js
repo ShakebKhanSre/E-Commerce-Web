@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getAllProducts } from "../../Redux/Action/Action.jsx";
+import { getAllProducts } from "../../Redux/Auth/Action/Action.jsx";
 import { useDispatch } from "react-redux";
 import "./index.css";
 import Item from "../../Components/Item/Item.jsx";
@@ -31,7 +31,7 @@ const ViewAll = () => {
         {viewAllData.length != 0 ? (
           viewAllData.map((item, index) => (
             <div onClick={() => itemClick(item)}>
-              <Item source={item} width={"250px"} height={"250px"} o />
+              <Item source={item} />
             </div>
           ))
         ) : (

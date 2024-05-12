@@ -7,10 +7,12 @@
     left: 0px;
     right: 0px;
 }
+
 .Best-Selling-Header {
     font-weight: bold;
     font-size: 20px;
 }
+
 .Scroll-Image {
     align-self: center;
     display: flex;
@@ -18,8 +20,14 @@
     gap: 20px;
     cursor: pointer;
 }
+
 .Scroll-Image img {
     align-self: center;
+}
+
+.summary img {
+    height: 150px;
+    width: 150px;
 }
 
 
@@ -28,7 +36,7 @@
 }
 
 
-.Product-Data { 
+.Product { 
     display: flex;
     overflow-x: scroll;
     scrollbar-width: none;
@@ -46,19 +54,23 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
 }
 
 .Add-Icon {
-    background-color:yellowgreen;
-    height: 90px;
-    width: 90px;
-    padding: 40px;
-    border-radius: 20px;
+    background-color: rgb(249,217,76);
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding:40px;
 }
-
 
 .Edit-Icon {
     position: relative;
-    left: 110px;
+    height: 30px;
+    width: 30px;
     bottom: 210px;
+    left: 130px;
+    cursor: pointer;
 }

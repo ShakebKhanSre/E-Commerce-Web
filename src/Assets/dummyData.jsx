@@ -1,6 +1,6 @@
 export const menuData = [
-  "men's clothing",
-  "women's clothing",
-  "electronics",
-  "jewelery",
+  "Men's Clothing",
+  "Women's Clothing",
+  "Electronics",
+  "Jewelery",
 ];

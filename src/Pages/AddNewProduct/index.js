@@ -7,7 +7,9 @@ import {
   addNewProduct,
   getProductDetail,
   updateProduct,
-} from "../../Redux/Action/Action.jsx";
+  setNavbarState,
+} from "../../Redux/Auth/Action/Action.jsx";
+
 import { useNavigate, useParams } from "react-router-dom";
 
 const AddNewProduct = () => {
@@ -27,6 +29,7 @@ const AddNewProduct = () => {
   const { type, productId } = useParams();
 
   useEffect(() => {
+    dispatch(setNavbarState(false));
     if (type == "Edit") {
       dispatch(
         getProductDetail(

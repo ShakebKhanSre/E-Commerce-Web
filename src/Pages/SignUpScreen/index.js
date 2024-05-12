@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Modal from "../../Components/Modal";
 import { enums } from "../../Enums/Enums";
-import { signUp } from "../../Redux/Action/Action.jsx";
+import { signUp } from "../../Redux/Auth/Action/Action.jsx";
 import "./index.css";
 
 const SignUpScreen = () => {
@@ -53,7 +53,7 @@ const SignUpScreen = () => {
           }
         },
         (err) => {
-          console.log(err);
+          console.log("err", err);
         }
       )
     );

@@ -1,23 +1,27 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import HeroBanner from "../../Components/HeroBanner/HeroBanner";
 import Footer from "../../Components/Footer/Footer";
 import { enums } from "../../Enums/Enums";
-import { getAllProducts } from "../../Redux/Action/Action";
+import {
+  getAllProducts,
+  setNavbarState,
+} from "../../Redux/Auth/Action/Action.jsx";
 import Item from "../../Components/Item/Item";
-import "./Shop.css";
+import "./Home.css";
 import { useNavigate } from "react-router-dom";
 import Spinner from "react-spinkit";
 
 const Shop = () => {
   const { innerWidth } = window;
-
   const [allData, setAllData] = useState([]);
   const ref = useRef(null);
   const navigate = useNavigate();
+
   const dispatch = useDispatch();
 
   useEffect(() => {
+    dispatch(setNavbarState(true));
     dispatch(
       getAllProducts((res) => {
         setAllData(res);
@@ -32,21 +36,23 @@ const Shop = () => {
 
   const addNewProduct = () => {
     return (
-      <div>
+      <>
         <p className="Best-Selling-Header">{enums.addNew}</p>
         <div className="Add-Icon" onClick={() => handleOnPressAddNew("Add")}>
           <img
-            width={90}
-            height={90}
+            width={50}
+            height={50}
             src={"https://cdn-icons-png.flaticon.com/512/992/992651.png"}
           />
         </div>
-      </div>
+      </>
     );
   };
 
   const handleClick = (item) => {
-    navigate(`/product/${item?.id}`);
+    navigate(`/product/${item?.id}`, {
+      state: "Pass Data through route",
+    });
   };
 
   const handleScroll = (type) => {
@@ -85,16 +91,14 @@ const Shop = () => {
           </div>
         </div>
 
-        <div className="Product-Data" ref={ref}>
+        <div className="Product" ref={ref}>
           {allData.length != 0 ? (
             allData.map((item, index) => (
-              <div>
+              <div className="dddd">
                 <div className="summary" onClick={() => handleClick(item)}>
-                  <Item source={item} width={"150px"} height={"150px"} />
+                  <Item source={item} />
                 </div>
                 <img
-                  width={50}
-                  height={50}
                   src={
                     "https://cdn-icons-png.flaticon.com/512/4226/4226577.png"
                   }
@@ -106,7 +110,7 @@ const Shop = () => {
           ) : (
             <Spinner
               name="circle"
-              style={{ width: 70, height: 70, marginLeft: innerWidth / 2 }}
+              style={{ width: 50, height: 50, marginLeft: innerWidth / 2 }}
             />
           )}
         </div>

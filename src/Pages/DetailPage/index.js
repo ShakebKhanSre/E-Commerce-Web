@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { getProductDetail, getAllProducts } from "../../Redux/Action/Action";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import {
+  getProductDetail,
+  getAllProducts,
+  setNavbarState,
+} from "../../Redux/Auth/Action/Action.jsx";
 import { useDispatch } from "react-redux";
 import Spinner from "react-spinkit";
 
@@ -11,6 +15,8 @@ import Item from "../../Components/Item/Item";
 const DetailPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
+  const location = useLocation();
+
   const [details, setDetails] = useState({});
   const [recommendedData, setRecommendedData] = useState([]);
   const navigate = useNavigate();
@@ -20,6 +26,7 @@ const DetailPage = () => {
   };
 
   useEffect(() => {
+    dispatch(setNavbarState(false));
     dispatch(
       getProductDetail(
         id,
@@ -38,10 +45,8 @@ const DetailPage = () => {
     );
   }, [id]);
 
-  console.log("details", Object.keys(details).length);
-
   const handleOnPress = (item) => {
-    navigate(`product/${item?.id}`);
+    navigate(`/product/${item?.id}`, { replace: true });
   };
 
   return (
@@ -74,7 +79,7 @@ const DetailPage = () => {
         <div className="Product-Data">
           {recommendedData.map((item, index) => (
             <div onClick={() => handleOnPress(item)}>
-              <Item source={item} width={"150px"} height={"150px"} />
+              <Item source={item} />
             </div>
           ))}
         </div>

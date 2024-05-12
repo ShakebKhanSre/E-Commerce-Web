@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { enums } from "../../Enums/Enums";
-import { login } from "../../Redux/Action/Action";
+import { login, setNavbarState } from "../../Redux/Auth/Action/Action.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import Modal from "../../Components/Modal";
 import "./Login.css";
@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const dispatch = useDispatch();
-  const { token } = useSelector((state) => state?.authenticationReducer);
+
   const navigate = useNavigate();
 
   const [userName, setUserName] = useState("");
@@ -17,7 +17,12 @@ const Login = () => {
 
   const onButtonPress = () => {
     setModalState(false);
+    navigate("/");
   };
+
+  useEffect(() => {
+    dispatch(setNavbarState(false));
+  }, []);
 
   const handleSignUpClick = () => {
     navigate("/sign-up");

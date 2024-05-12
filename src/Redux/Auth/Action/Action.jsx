@@ -2,7 +2,7 @@ import {
   sendPostRequest,
   sendGetRequest,
   putRequestAuthenticated,
-} from "../../ApiManager";
+} from "../../../ApiManager";
 import { authConstants } from "../Constants/Constants";
 
 export const getAllProducts =
@@ -92,3 +92,12 @@ export const updateProduct =
       callback(response);
     } catch {}
   };
+
+export const setNavbarState = (state) => async (dispatch) => {
+  try {
+    dispatch({
+      type: authConstants.NAVBAR_STATE,
+      payload: state,
+    });
+  } catch {}
+};
