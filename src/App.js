@@ -5,7 +5,7 @@ import { NextRoutes } from "./routes";
 import { useSelector } from "react-redux";
 
 function App({ props }) {
-  const { showNavbar } = useSelector((state) => state?.authenticationReducer);
+  const { showNavbar } = useSelector((state) => state?.authenticationReducers);
 
   return (
     <div>

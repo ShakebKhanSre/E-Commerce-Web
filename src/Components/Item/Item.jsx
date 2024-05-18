@@ -4,13 +4,14 @@ import "./Item.css";
 const Item = (props) => {
   return (
     <div className="Container">
-      <img
-        src={props?.source?.image}
-        width={props.width}
-        height={props.height}
-      />
-
-      <p>{`Price - ${props?.source?.price}$`}</p>
+      <div>
+        <img
+          src={props?.source?.image}
+          width={props.width}
+          height={props.height}
+        />
+        <p>{`Price - ${props?.source?.price}$`}</p>
+      </div>
     </div>
   );
 };

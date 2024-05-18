@@ -1,0 +1,13 @@
+.Carousal {
+   margin-top: 80px;
+   display: flex;
+   overflow: hidden;
+   overflow-x: scroll;
+   gap: 100px;
+   scrollbar-width: none;
+}
+
+.Carousal img {
+    border-radius: 20px;
+    align-self: center;
+}

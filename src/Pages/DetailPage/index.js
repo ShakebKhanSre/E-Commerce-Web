@@ -16,6 +16,7 @@ const DetailPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const location = useLocation();
+  // console.log('location',location)
 
   const [details, setDetails] = useState({});
   const [recommendedData, setRecommendedData] = useState([]);

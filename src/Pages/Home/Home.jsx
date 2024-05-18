@@ -11,14 +11,35 @@ import Item from "../../Components/Item/Item";
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
 import Spinner from "react-spinkit";
+import { AddToCart } from "../../Redux/Misc/Action";
+import { debounce, setNavbarBackground } from "../../Helper/Helper";
+import Carousal from "../../Components/Carousal";
 
 const Shop = () => {
+  const { cartItems } = useSelector((state) => state?.miscReducer);
   const { innerWidth } = window;
+
   const [allData, setAllData] = useState([]);
+
+  const onHandleScroll = () => {
+    if (window.scrollY > 10) {
+      setNavbarBackground({ color: "#dcdcdc" });
+    } else {
+      setNavbarBackground({ color: "white" });
+    }
+  };
+
   const ref = useRef(null);
   const navigate = useNavigate();
-
   const dispatch = useDispatch();
+  const onClickAddToCart = (item) => {
+    dispatch(AddToCart(item));
+  };
+
+  useEffect(() => {
+    debounce();
+    document.body.onscroll = debounce(onHandleScroll, 200, true);
+  }, []);
 
   useEffect(() => {
     dispatch(setNavbarState(true));
@@ -68,6 +89,7 @@ const Shop = () => {
       });
     }
   };
+
   const bestSellingProduct = () => {
     return (
       <div className="Best-Selling">
@@ -98,6 +120,12 @@ const Shop = () => {
                 <div className="summary" onClick={() => handleClick(item)}>
                   <Item source={item} />
                 </div>
+                <div
+                  className="Add-Cart"
+                  onClick={() => onClickAddToCart(item)}
+                >
+                  Add To Cart
+                </div>
                 <img
                   src={
                     "https://cdn-icons-png.flaticon.com/512/4226/4226577.png"
@@ -121,7 +149,8 @@ const Shop = () => {
   return (
     <>
       <div className="container">
-        <HeroBanner />
+        {/* <HeroBanner /> */}
+        <Carousal />
         {bestSellingProduct()}
         {addNewProduct()}
       </div>

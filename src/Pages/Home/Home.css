@@ -13,6 +13,16 @@
     font-size: 20px;
 }
 
+
+.Add-Cart {
+    background-color: rgb(249,217,76);
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
 .Scroll-Image {
     align-self: center;
     display: flex;
@@ -70,7 +80,7 @@
     position: relative;
     height: 30px;
     width: 30px;
-    bottom: 210px;
+    bottom: 230px;
     left: 130px;
     cursor: pointer;
 }

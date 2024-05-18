@@ -7,7 +7,6 @@ import { menuData } from "../../Assets/dummyData.jsx";
 export const Navbar = () => {
   const [menu, setMenu] = useState("Shop");
   const navigate = useNavigate();
-  const { token } = useSelector((state) => state?.authenticationReducer);
 
   const onClickCartIcon = () => {
     navigate("/cartDetails");
@@ -44,17 +43,18 @@ export const Navbar = () => {
       </ul>
 
       <div className="nav-login-cart">
-        {token ? (
-          <div className="Cart-Icon">
-            <img
-              src={
-                "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png"
-              }
-            />
-            <div className="Cart-Count" onClick={onClickCartIcon}>
-              <img src="https://cdn-icons-png.flaticon.com/256/1170/1170678.png" />
-              <div className="Count">
-                <p>5</p>
+        {localStorage.getItem("token") ? (
+          <div>
+            <div className="Cart-Icon">
+              <div>
+                <img
+                  src={
+                    "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png"
+                  }
+                />
+              </div>
+              <div className="Cart-Count" onClick={onClickCartIcon}>
+                <span>Check Cart</span>
               </div>
             </div>
           </div>

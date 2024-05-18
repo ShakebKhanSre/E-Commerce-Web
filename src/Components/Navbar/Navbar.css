@@ -4,7 +4,7 @@
     justify-content: space-around;
     align-items: center;
     padding-top: 20px;
-   
+    background-color: var(--NavColor);  
 }
 
 .nav-login-cart img {
@@ -12,7 +12,6 @@
     width: 40px;
     border-radius: 40px;
 }
-
 
 .nav-login-cart {
     display: flex;
@@ -77,17 +76,31 @@
 
 .Cart-Count {
     display: flex;
+    background-color: rgb(249,217,76);
+    cursor: pointer;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0px 20px;
 }
 
 .Count {
-
     position: relative;
     bottom: 20px;
     right:3px;
-   
 }
 
 .Count p {
     color: crimson;
     font-weight: bolder;
 }
+
+.Cart-Number {
+    background-color: aqua;
+    position: relative;
+}
+
+.Cart-Number p {
+    align-self: center;
+}
+
+

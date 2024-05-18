@@ -43,6 +43,7 @@ const Login = () => {
         (res) => {
           if (res?.token) {
             setModalState(true);
+            localStorage.setItem("token", res?.token);
           }
         },
         (err) => {
