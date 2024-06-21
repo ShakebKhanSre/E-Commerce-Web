@@ -58,6 +58,16 @@ export const NextRoutes = [
       />
     ),
   },
+  {
+    path: "/Video-Section",
+    element: (
+      <ShopCategory
+        category="Video-Section"
+        bannerImageUrl={womenBannerImages}
+        color={"#f0e68c"}
+      />
+    ),
+  },
   { path: "/login", element: <Login setShowNavbar /> },
   { path: "/product/:id", element: <DetailPage /> },
   { path: "/sign-up", element: <SignUpScreen /> },

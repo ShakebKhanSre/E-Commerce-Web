@@ -3,6 +3,7 @@ export const menuData = [
   "Women's Clothing",
   "Electronics",
   "Jewelery",
+  "Video-Section",
 ];
 
 export const carousalImages = [

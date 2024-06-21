@@ -4,7 +4,7 @@
     justify-content: space-around;
     align-items: center;
     padding-top: 20px;
-    background-color: var(--NavColor);  
+   background-color: black;
 }
 
 .nav-login-cart img {
@@ -40,20 +40,20 @@
 
 .nav-logo p { 
     font-size: 20px;  
-    color: black;
+    color:white;
 }
 
 .Link {
     text-decoration: none;
-    color: black;
-    font-size: 18px;;
+    color:white;
+    font-size: 18px;
     font-weight:500;
 }
 
 .nav-menu hr { 
     height: 1px;
     width: 80%;
-   background: white;
+   background:white;
 }
 
 .nav-logo  {

@@ -37,7 +37,6 @@
     justify-content: space-between;
 }
 
-
 .Result-Heading button img {
     align-self: center;
     margin-left: 5px;
@@ -50,3 +49,45 @@
     background-color:var(--buttonColor);
 }
 
+.Video-Container {
+    display: flex;
+    justify-content: space-between;
+}
+.Video-data {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.Video-List {
+    overflow-y: scroll;
+    height: 800px;
+    scrollbar-width: none; 
+    border-width: 1px;
+    border-color: black;
+    padding: 20px;
+    border-style: solid;  
+}
+
+.Video-Player {
+    background-color:'black'
+}
+
+
+.Long-Text {
+    font-size: 25px;
+    opacity: 0.3;
+}
+
+.Selected-Video-Description {
+    padding: 10px;
+    font-size: 25px;
+}
+
+.Whole-Text {
+    display: flex;
+    align-items: center;
+}

@@ -21,3 +21,7 @@ export function debounce(callback, wait, immediate) {
 export const setNavbarBackground = ({ color }) => {
   document.documentElement.style.setProperty("--NavColor", color);
 };
+
+export const setVideoOptionView = ({ isSelected }) => {
+  document.documentElement.style.setProperty("--videoOption", isSelected);
+};

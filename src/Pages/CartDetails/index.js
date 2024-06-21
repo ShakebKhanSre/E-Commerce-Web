@@ -11,7 +11,18 @@ const CartDetails = () => {
   useEffect(() => {
     dispatch(setNavbarState(false));
   }, []);
-  return <div>{"index"}</div>;
+  return (
+    <div
+      style={{
+        height: "100vh",
+        alignItems: "center",
+        justifyContent: "center",
+        display: "flex",
+      }}
+    >
+      <p>{"Under Development !!!! Stay Tuned"}</p>
+    </div>
+  );
 };
 
 export default CartDetails;
