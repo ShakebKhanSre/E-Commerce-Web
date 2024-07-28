@@ -1,6 +1,5 @@
 .container {
     padding: 40px;
-
 }
 
 .navbar { 
@@ -84,4 +83,46 @@
     bottom: 230px;
     left: 130px;
     cursor: pointer;
+}
+
+.Carousal-Aspect {
+    height: 400px;
+    width: 1200px;
+}
+
+.Banner-Aspect {
+    height: 300px;
+    width: 100%;
+}
+.Footer-Options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:50px
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .Carousal-Aspect {
+        height: 300px;
+        width: 800px;
+    }
+    .Banner-Aspect {
+        height: 200px;
+    }
+    
+}
+
+@media only screen and (max-width: 700px) {
+    .Carousal-Aspect {
+        height: 200px;
+        width: 300px;
+    }
+    .Banner-Aspect {
+        height: 100px;
+    }
+
+    .Footer-Options {
+        display: block;
+    }
 }

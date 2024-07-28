@@ -2,7 +2,7 @@ import React from "react";
 import { enums } from "../../Enums/Enums";
 import "./Footer.css";
 
-const Footer = () => {
+const Footer = ({ className }) => {
   const footerOptions = [
     "HOME",
     "AGENT",
@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <div className="Footer">
       <h2>{"Shopper"}</h2>
-      <div className="Footer-Options">
+      <div className={className}>
         {footerOptions.map((item, index) => (
           <p>{item}</p>
         ))}

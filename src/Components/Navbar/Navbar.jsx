@@ -12,6 +12,11 @@ export const Navbar = () => {
     navigate("/cartDetails");
   };
 
+  const toggleDrawer = () => {
+    const drawerRef = document.getElementById("Drawer");
+    drawerRef.classList.toggle("active");
+  };
+
   return (
     <div className="navbar">
       <div className="nav-logo">
@@ -24,7 +29,7 @@ export const Navbar = () => {
         <p>{"Shopper"}</p>
       </div>
 
-      <ul className="nav-menu">
+      <ul className="nav-menu" id="Drawer">
         <li onClick={() => setMenu("Shop")}>
           <Link className="Link" to="/">
             All
@@ -44,19 +49,12 @@ export const Navbar = () => {
 
       <div className="nav-login-cart">
         {localStorage.getItem("token") ? (
-          <div>
-            <div className="Cart-Icon">
-              <div>
-                <img
-                  src={
-                    "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png"
-                  }
-                />
-              </div>
-              <div className="Cart-Count" onClick={onClickCartIcon}>
-                <span>Check Cart</span>
-              </div>
-            </div>
+          <div className="Cart-Icon">
+            <img
+              src={
+                "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png"
+              }
+            />
           </div>
         ) : (
           <button
@@ -67,6 +65,10 @@ export const Navbar = () => {
             Login
           </button>
         )}
+      </div>
+
+      <div className="Cart-Count" onClick={toggleDrawer}>
+        <span>Side Menu</span>
       </div>
     </div>
   );

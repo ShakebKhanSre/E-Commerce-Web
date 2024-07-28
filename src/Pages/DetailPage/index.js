@@ -54,8 +54,8 @@ const DetailPage = () => {
     <div className="Details-Page">
       {Object.keys(details).length != 0 ? (
         <div className="details">
-          <div>
-            <img src={details.image} width={"400px"} height={"500px"} />
+          <div className="Image-Container">
+            <img src={details.image} className="Detail-Image" />
           </div>
           <div className="ProductDetails">
             <p className="title">{details.title}</p>

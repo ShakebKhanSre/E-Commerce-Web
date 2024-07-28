@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { carousalImages } from "../../Assets/dummyData";
 import "./index.css";
 
-const Carousal = () => {
+const Carousal = ({ className }) => {
   const carousalRef = useRef(null);
   const [focusElement, setFocusElement] = useState(0);
   useEffect(() => {
@@ -17,7 +17,7 @@ const Carousal = () => {
       <div className="Carousal">
         {carousalImages.map((item, index) => (
           <div ref={carousalRef}>
-            <img src={item} width="900" height="426px" />
+            <img src={item} className={className} />
           </div>
         ))}
       </div>

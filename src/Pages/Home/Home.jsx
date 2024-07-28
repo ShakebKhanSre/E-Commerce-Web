@@ -90,6 +90,17 @@ const Shop = () => {
     }
   };
 
+  const onHoverImage = (id) => {
+    const element = document.getElementById(id);
+    element.style.width = "200px";
+    element.style.transition = "width 1s, height 1s";
+  };
+
+  const onMouseLeave = (id) => {
+    const element = document.getElementById(id);
+    element.style.width = "150px";
+  };
+
   const bestSellingProduct = () => {
     return (
       <div className="Best-Selling">
@@ -105,6 +116,7 @@ const Shop = () => {
               onClick={() => handleScroll("forward")}
             />
             <img
+              className="Scroll-Icon"
               src="https://cdn-icons-png.flaticon.com/512/93/93634.png"
               width={35}
               height={35}
@@ -118,7 +130,12 @@ const Shop = () => {
             allData.map((item, index) => (
               <div className="dddd">
                 <div className="summary" onClick={() => handleClick(item)}>
-                  <Item source={item} />
+                  <Item
+                    source={item}
+                    onHover={() => onHoverImage(`dummyImage${index}`)}
+                    id={`dummyImage${index}`}
+                    onMouseLeave={() => onMouseLeave(`dummyImage${index}`)}
+                  />
                 </div>
                 <div
                   className="Add-Cart"
@@ -149,12 +166,12 @@ const Shop = () => {
   return (
     <>
       <div className="container">
-        {/* <HeroBanner /> */}
-        <Carousal />
+        <Carousal className="Carousal-Aspect" />
+        <HeroBanner className="Banner-Aspect" />
         {bestSellingProduct()}
         {addNewProduct()}
       </div>
-      <Footer />
+      <Footer className="Footer-Options" />
     </>
   );
 };

@@ -1,5 +1,4 @@
 .details {
-    
     display: flex;
     flex-direction: row;
     gap: 200px;
@@ -40,6 +39,7 @@
     display: flex;
     flex-direction: column;
     gap: 25px;  
+   
 }
 
 .ProductDetails button {
@@ -75,4 +75,46 @@
 
 .ViewAll-Button {
     cursor: pointer;
+}
+
+.Detail-Image {
+    width: 400px;
+    height: 400px;
+}
+
+.Image-Container {
+   display: flex;
+   justify-content: center;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .details {
+        display: block;
+    }
+    .Detail-Image {
+        width: 200px;
+        height: 200px;
+    }
+    .title  {
+        align-self: center;
+    }
+    .price { 
+        align-self: center;
+    }
+    .category {
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .Detail-Image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .Product-Data {
+       display: block;
+    }
+
 }
